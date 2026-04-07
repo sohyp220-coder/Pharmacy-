@@ -1,0 +1,126 @@
+INPUTS:
+
+inp                   المدخل 
+
+<input type="text" class="inp">
+
+
+
+
+BUTTONS:
+
+btn               الزرار
+btn btn-p         الزرار الازرق
+btn btn-s         الزرار الرمادي
+btn btn-S         الزرار الاخضر
+btn btn-l         الزرار شبيه الرابط
+
+
+<button class = "btn">button</button>
+
+<button class = "btn btn-p">button</button>
+
+<button class = "btn btn-s">button</button>
+
+<button class = "btn btn-S">button</button>
+
+<button class = "btn btn-l">button</button>
+
+
+
+
+
+CARDS:
+
+card-container > card-img + card-title + card-p
+            صورة + عنوان + برجراف  « الحاوي
+
+
+<div class="card-container">
+    <img src="" alt="" class="card-img">
+    <h1 class="card-title">Title</h1>
+    <p class="card-p">paragraph</p>
+</div>
+
+
+
+
+
+COLLABSE:
+
+collabse #(div) > btn btn-p + container + collabse-p
+
+
+<div class="collabse">
+        <button class="btn btn-p"></button>
+        <div class="container">
+            <p class="collabse-p"></p>
+        </div>
+</div>
+    
+    
+    
+    
+
+CLOSE BUTTON:
+
+close-btn + btn-container #(div)
+
+<button class="close-btn"></button>
+<div class="btn-container">
+    <p></p>
+</div>
+
+
+
+
+
+DROP DOWN:
+
+drop-down #(div)> drop-btn btn btn-S + drop-body #(div) > btn btn-p+ btn btn-p
+
+container #(div) > #(h2)
+
+
+
+<div class="drop-down">
+    <button class="drop-btn btn btn-S"></button>
+    <div class="drop-body">
+      <a class="btn btn-p" href="#home"></button>
+      <a class="btn btn-p" href="#apout"></a>
+    </div>
+</div> 
+
+
+<div class="container">
+    <h2 id="home">home <p>...</p></h2>
+    <h2 id="about">...</h2>
+    <h2 id="h2">...</h2>
+</div>
+
+
+
+
+INFO :
+
+show-info btn btn-p + info container  #(div)> info-header  #(div)> close-btn  & info-p  #(div)+ info-footer  #(div)+ ok btn btn-p + close btn btn-s
+
+
+
+<button class="show-info btn btn-p">
+        show info
+</button>
+<div class="info container">
+    <div class="info-header">
+            header
+            <button class="close-btn"></button>
+    </div>
+    <hr>
+    <div class="info-p">paragraph</div>
+    <hr>
+    <div class="info-footer">footer</div>
+    <button class="ok btn btn-p">OK</button>
+    <button class="close btn btn-s">CLOSE</button>
+</div>
+
+
