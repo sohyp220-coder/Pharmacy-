@@ -1,0 +1,16 @@
+{
+  "name_arabic": "شركة الذئب للبرمجيات",
+  "name_english":"WolfAlphaSystems",
+  "short_name": "WolfCompany",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#272727",
+  "theme_color": "#272727",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ]
+}

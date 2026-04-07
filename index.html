@@ -6,6 +6,7 @@
     <title>Pharmacy Demo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sohyp220-coder/WolfStyle@main/WolfStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
     <style>
     body { background: #272727; margin: 0; padding: 0; }
     .btn { background: #D6D6D6; }
@@ -43,7 +44,7 @@
 
     <div class="cards-wrapper">
         <div class="card-container">
-            <img src="imgs/smart.jpg" class="card-img">
+            <img src="smart.jpg" class="card-img">
             <p class="card-p" value = "Smart Prescription">Smart Prescription</p>
             <input type="file" id="upload-p" capture="environment" accept="image/*" style="display: none;">
             <label for="upload-p" class="btn btn-l" style="display: block; width: 90%; margin: 0 auto; cursor: pointer; font-size: 10px; padding: 5px 0;" value="Send Prescription">
@@ -52,19 +53,19 @@
         </div>
 
         <div class="card-container">
-            <img src="imgs/care.jpg" class="card-img">
+            <img src="care.jpg" class="card-img">
             <p class="card-p" value = "Beauty & Skincare">Beauty & Skincare</p>
             <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
         </div>
 
         <div class="card-container">
-            <img src="imgs/vitamin.jpg" class="card-img">
+            <img src="vitamin.jpg" class="card-img">
             <p class="card-p" value = "Vitamins & Offers">Vitamins & Offers</p>
             <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
         </div>
 
         <div class="card-container">
-            <img src="imgs/medical.jpg" class="card-img">
+            <img src="medical.jpg" class="card-img">
             <p class="card-p" value = "Medical Tools">Medical Tools</p>
             <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
         </div>
