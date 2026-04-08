@@ -2,10 +2,9 @@ const doctorPhone = "201556101000";
 const apiKey = "29faf6acadd97ad4a977bb79e784fa00";
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-    .then(() => console.log("Wolf Systems App Ready!"))
-    .catch((err) => console.log("Error:", err));
+  navigator.serviceWorker.register('sw.js');
 }
+
 
 
 document.getElementById('upload-p').addEventListener('change', async function() {

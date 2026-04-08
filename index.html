@@ -3,80 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacy Demo</title>
+    <title>Pharmacy App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sohyp220-coder/WolfStyle@main/WolfStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <style>
-    body { background: #272727; margin: 0; padding: 0; }
-    .btn { background: #D6D6D6; }
-    .cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px;
-        gap: 10px;
-    }
-    .card-container {
-        flex: 0 0 calc(50% - 15px); 
-        box-sizing: border-box;
-        text-align: center;
-        color: #DECAB2;
-        border: 1px solid #0081C2;
-        border-radius: 10px;
-        background: #333;
-        padding: 10px 5px;
-    }
-    .card-img {
-        width: 100%; 
-        height: 80px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-    .card-p { font-size: 13px; margin: 8px 0; }
+        body { 
+            background: #0f172a; 
+            margin: 0; 
+            padding: 0; 
+            font-family: sans-serif;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-bottom: 4px solid #10b981;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            background: #1e293b;
+            flex: 0 0 calc(50% - 15px);
+            width: calc(50% - 15px);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            border-bottom: 2px solid #10b981;
+        }
+
+        .card-p {
+            font-size: 13px;
+            font-weight: bold;
+            color: #f1f5f9;
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .btn-order {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            width: 85%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e293b;
+            margin-top: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-top: 2px solid #334155;
+        }
     </style>
 </head>
 <body>
-    <header class="container" style="border: seagreen 2px dashed; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px;">
-        <p class="btn btn-p">صيدلية المصري الجديدة الحديثة</p>
-        <p class="btn btn-S" style="margin-top: 5px;">صحتك هي اولويتنا</p>
+
+    <header>
+        <div class="btn btn-p" style="display:inline-block; background: #10b981; color: white;">صيدلية المصري الجديدة الحديثة</div>
+        <div style="color: #94a3b8; font-size: 13px; margin-top: 8px;">صحتك هي أولويتنا</div>
     </header>
 
     <div class="cards-wrapper">
         <div class="card-container">
             <img src="smart.jpg" class="card-img">
-            <p class="card-p" value = "Smart Prescription">Smart Prescription</p>
+            <p class="card-p">Smart Prescription</p>
             <input type="file" id="upload-p" capture="environment" accept="image/*" style="display: none;">
-            <label for="upload-p" class="btn btn-l" style="display: block; width: 90%; margin: 0 auto; cursor: pointer; font-size: 10px; padding: 5px 0;" value="Send Prescription">
-                Send Prescription
-            </label>
+            <label for="upload-p" class="btn btn-order" style="display: block; text-align: center; cursor: pointer;">Send Prescription</label>
         </div>
 
         <div class="card-container">
             <img src="care.jpg" class="card-img">
-            <p class="card-p" value = "Beauty & Skincare">Beauty & Skincare</p>
-            <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
+            <p class="card-p">Beauty & Skincare</p>
+            <button class="btn btn-order" onclick="sendOrder(this)">Order Now</button>
         </div>
 
         <div class="card-container">
             <img src="vitamin.jpg" class="card-img">
-            <p class="card-p" value = "Vitamins & Offers">Vitamins & Offers</p>
-            <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
+            <p class="card-p">Vitamins & Offers</p>
+            <button class="btn btn-order" onclick="sendOrder(this)">Order Now</button>
         </div>
 
         <div class="card-container">
             <img src="medical.jpg" class="card-img">
-            <p class="card-p" value = "Medical Tools">Medical Tools</p>
-            <button class="btn btn-S" onclick="sendOrder(this)" style="margin-top: 5px;">Order Now</button>
+            <p class="card-p">Medical Tools</p>
+            <button class="btn btn-order" onclick="sendOrder(this)">Order Now</button>
         </div>
     </div>
 
-    <footer class="container" style="border: burlywood 2px dashed; display: flex; justify-content: center; align-items: center; color: beige; background: saddlebrown; margin: 10px; gap: 10px;">
+    <footer>
         <a href="https://wa.me/201556101000">
-            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 24px;"></i>
+            <i class="fa-brands fa-whatsapp" style="color: #22c55e; font-size: 32px;"></i>
         </a>
-        <p style="margin: 0;">Contact Via WhatsApp</p>
+        <p style="margin: 0; color: #f1f5f9; font-weight: bold;">تواصل معنا مباشر</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
