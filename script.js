@@ -26,10 +26,19 @@ document.getElementById('upload-p').addEventListener('change', async function() 
     }
 });
 
-function sendOrder(event) {
-    const cardCont = event.target.closest('.card-cont');
-    const sectionName = cardCont.querySelector('.card-p').innerText;
-    let message = `استأذن حضرتك يا دكتور في معرفة أنواع الـ (${sectionName}) المتوفرة عندكم.`;
+
+window.sendOrder = function(event, drugNameAr) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    let name = drugNameAr;
+    if (!name) {
+        const cardCont = event.target.closest('.card-cont') || event.target.closest('.div');
+        name = cardCont.querySelector('span').innerText;
+    }
+
+    const doctorPhone = "201556101000";
+    let message = `السلام عليكم يا دكتور، محتاج أطلب دواء: (${name})`;
     const whatsappUrl = `https://wa.me/${doctorPhone}?text=${encodeURIComponent(message)}`;
     window.location.href = whatsappUrl;
 }

@@ -47,7 +47,7 @@
             padding-bottom: 15px;
             box-sizing: border-box;
         }
-
+        
         .card-img {
             width: 100%;
             height: 90px;
@@ -102,22 +102,19 @@
             <label for="upload-p" class="btn btn-order" style="display: block; text-align: center; cursor: pointer;">Send Prescription</label>
         </div>
 
-        <div class="card-cont">
+        <div class="card-cont card">
             <img src="care.jpg" class="card-img">
             <p class="card-p">Beauty & Skincare</p>
-            <button class="btn btn-order" onclick="sendOrder(event)">Order Now</button>
         </div>
 
-        <div class="card-cont">
+        <div class="card-cont card">
             <img src="vitamin.jpg" class="card-img">
             <p class="card-p">Vitamins & Offers</p>
-            <button class="btn btn-order" onclick="sendOrder(event)">Order Now</button>
         </div>
 
-        <div class="card-cont">
+        <div class="card-cont card">
             <img src="medical.jpg" class="card-img">
             <p class="card-p">Medical Tools</p>
-            <button class="btn btn-order" onclick="sendOrder(event)">Order Now</button>
         </div>
     </div>
 
@@ -127,7 +124,8 @@
         </a>
         <p style="margin: 0; color: #f1f5f9; font-weight: bold;">تواصل معنا مباشر</p>
     </footer>
-
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    <script src="db.js"></script>
 </body>
 </html>
